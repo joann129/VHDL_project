@@ -1,0 +1,653 @@
+Classic Timing Analyzer report for project
+Wed Dec 18 19:58:17 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Clock'
+  7. tsu
+  8. tco
+  9. tpd
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                 ;
++------------------------------+-------+---------------+----------------------------------+----------------+-----------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From           ; To                    ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------+-----------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 8.351 ns                         ; w              ; regn:functionreg|Q[1] ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 19.004 ns                        ; regn:regG|Q[0] ; BusWires[1]           ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 15.594 ns                        ; Data[1]        ; BusWires[1]           ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.863 ns                        ; Ry[0]          ; regn:functionreg|Q[0] ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A   ; None          ; 91.09 MHz ( period = 10.978 ns ) ; regn:regG|Q[0] ; regn:regG|Q[2]        ; Clock      ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                ;                       ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------+-----------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C70F896C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clock'                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                  ; To             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 91.09 MHz ( period = 10.978 ns )                    ; regn:regG|Q[0]        ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.764 ns               ;
+; N/A                                     ; 92.11 MHz ( period = 10.857 ns )                    ; upcount:counter|Q[1]  ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.691 ns               ;
+; N/A                                     ; 92.34 MHz ( period = 10.830 ns )                    ; regn:functionreg|Q[7] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.641 ns               ;
+; N/A                                     ; 92.57 MHz ( period = 10.803 ns )                    ; regn:regG|Q[2]        ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.589 ns               ;
+; N/A                                     ; 93.49 MHz ( period = 10.696 ns )                    ; regn:regG|Q[1]        ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.482 ns               ;
+; N/A                                     ; 93.95 MHz ( period = 10.644 ns )                    ; regn:functionreg|Q[6] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.455 ns               ;
+; N/A                                     ; 94.29 MHz ( period = 10.606 ns )                    ; upcount:counter|Q[0]  ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.418 ns               ;
+; N/A                                     ; 94.58 MHz ( period = 10.573 ns )                    ; regn:regG|Q[0]        ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.359 ns               ;
+; N/A                                     ; 95.61 MHz ( period = 10.459 ns )                    ; regn:regG|Q[0]        ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 10.245 ns               ;
+; N/A                                     ; 95.68 MHz ( period = 10.452 ns )                    ; upcount:counter|Q[1]  ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.286 ns               ;
+; N/A                                     ; 95.92 MHz ( period = 10.425 ns )                    ; regn:functionreg|Q[7] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.236 ns               ;
+; N/A                                     ; 96.17 MHz ( period = 10.398 ns )                    ; regn:regG|Q[2]        ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.184 ns               ;
+; N/A                                     ; 96.39 MHz ( period = 10.375 ns )                    ; regn:functionreg|Q[8] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.186 ns               ;
+; N/A                                     ; 96.73 MHz ( period = 10.338 ns )                    ; upcount:counter|Q[1]  ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 10.172 ns               ;
+; N/A                                     ; 96.98 MHz ( period = 10.311 ns )                    ; regn:functionreg|Q[7] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 10.122 ns               ;
+; N/A                                     ; 97.17 MHz ( period = 10.291 ns )                    ; regn:regG|Q[1]        ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.077 ns               ;
+; N/A                                     ; 97.24 MHz ( period = 10.284 ns )                    ; regn:regG|Q[2]        ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 10.070 ns               ;
+; N/A                                     ; 97.67 MHz ( period = 10.239 ns )                    ; regn:functionreg|Q[6] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.050 ns               ;
+; N/A                                     ; 97.72 MHz ( period = 10.233 ns )                    ; regn:functionreg|Q[2] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 10.066 ns               ;
+; N/A                                     ; 98.03 MHz ( period = 10.201 ns )                    ; upcount:counter|Q[0]  ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 10.013 ns               ;
+; N/A                                     ; 98.12 MHz ( period = 10.192 ns )                    ; regn:regG|Q[0]        ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.960 ns                ;
+; N/A                                     ; 98.14 MHz ( period = 10.190 ns )                    ; regn:regG|Q[0]        ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.960 ns                ;
+; N/A                                     ; 98.26 MHz ( period = 10.177 ns )                    ; regn:regG|Q[1]        ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.963 ns                ;
+; N/A                                     ; 98.77 MHz ( period = 10.125 ns )                    ; regn:functionreg|Q[6] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.936 ns                ;
+; N/A                                     ; 99.14 MHz ( period = 10.087 ns )                    ; upcount:counter|Q[0]  ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.899 ns                ;
+; N/A                                     ; 99.30 MHz ( period = 10.071 ns )                    ; upcount:counter|Q[1]  ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.887 ns                ;
+; N/A                                     ; 99.31 MHz ( period = 10.069 ns )                    ; upcount:counter|Q[1]  ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.887 ns                ;
+; N/A                                     ; 99.40 MHz ( period = 10.060 ns )                    ; regn:functionreg|Q[1] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.879 ns                ;
+; N/A                                     ; 99.56 MHz ( period = 10.044 ns )                    ; regn:functionreg|Q[7] ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.837 ns                ;
+; N/A                                     ; 99.58 MHz ( period = 10.042 ns )                    ; regn:functionreg|Q[7] ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.837 ns                ;
+; N/A                                     ; 99.83 MHz ( period = 10.017 ns )                    ; regn:regG|Q[2]        ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.785 ns                ;
+; N/A                                     ; 99.85 MHz ( period = 10.015 ns )                    ; regn:regG|Q[2]        ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.785 ns                ;
+; N/A                                     ; 100.26 MHz ( period = 9.974 ns )                    ; regn:regG|Q[0]        ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.761 ns                ;
+; N/A                                     ; 100.30 MHz ( period = 9.970 ns )                    ; regn:functionreg|Q[8] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.781 ns                ;
+; N/A                                     ; 100.44 MHz ( period = 9.956 ns )                    ; regn:regG|Q[0]        ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.705 ns                ;
+; N/A                                     ; 100.49 MHz ( period = 9.951 ns )                    ; regn:regG|Q[0]        ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.701 ns                ;
+; N/A                                     ; 100.89 MHz ( period = 9.912 ns )                    ; regn:functionreg|Q[0] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.731 ns                ;
+; N/A                                     ; 100.90 MHz ( period = 9.911 ns )                    ; regn:regG|Q[0]        ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.679 ns                ;
+; N/A                                     ; 100.91 MHz ( period = 9.910 ns )                    ; regn:regG|Q[1]        ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.678 ns                ;
+; N/A                                     ; 100.91 MHz ( period = 9.910 ns )                    ; regn:regG|Q[0]        ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.680 ns                ;
+; N/A                                     ; 100.93 MHz ( period = 9.908 ns )                    ; regn:regG|Q[1]        ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.678 ns                ;
+; N/A                                     ; 101.04 MHz ( period = 9.897 ns )                    ; regn:regG|Q[0]        ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.646 ns                ;
+; N/A                                     ; 101.09 MHz ( period = 9.892 ns )                    ; regn:regG|Q[0]        ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.642 ns                ;
+; N/A                                     ; 101.44 MHz ( period = 9.858 ns )                    ; regn:functionreg|Q[6] ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.651 ns                ;
+; N/A                                     ; 101.46 MHz ( period = 9.856 ns )                    ; regn:functionreg|Q[6] ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.651 ns                ;
+; N/A                                     ; 101.46 MHz ( period = 9.856 ns )                    ; regn:functionreg|Q[8] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.667 ns                ;
+; N/A                                     ; 101.49 MHz ( period = 9.853 ns )                    ; upcount:counter|Q[1]  ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.688 ns                ;
+; N/A                                     ; 101.64 MHz ( period = 9.839 ns )                    ; regn:regG|Q[0]        ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.617 ns                ;
+; N/A                                     ; 101.68 MHz ( period = 9.835 ns )                    ; upcount:counter|Q[1]  ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.632 ns                ;
+; N/A                                     ; 101.73 MHz ( period = 9.830 ns )                    ; upcount:counter|Q[1]  ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.628 ns                ;
+; N/A                                     ; 101.75 MHz ( period = 9.828 ns )                    ; regn:functionreg|Q[2] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.661 ns                ;
+; N/A                                     ; 101.77 MHz ( period = 9.826 ns )                    ; regn:functionreg|Q[7] ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.638 ns                ;
+; N/A                                     ; 101.83 MHz ( period = 9.820 ns )                    ; upcount:counter|Q[0]  ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.614 ns                ;
+; N/A                                     ; 101.85 MHz ( period = 9.818 ns )                    ; upcount:counter|Q[0]  ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.614 ns                ;
+; N/A                                     ; 101.85 MHz ( period = 9.818 ns )                    ; regn:regG|Q[0]        ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.572 ns                ;
+; N/A                                     ; 101.96 MHz ( period = 9.808 ns )                    ; regn:functionreg|Q[7] ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.582 ns                ;
+; N/A                                     ; 102.01 MHz ( period = 9.803 ns )                    ; regn:functionreg|Q[7] ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.578 ns                ;
+; N/A                                     ; 102.05 MHz ( period = 9.799 ns )                    ; regn:regG|Q[2]        ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.586 ns                ;
+; N/A                                     ; 102.15 MHz ( period = 9.790 ns )                    ; upcount:counter|Q[1]  ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.606 ns                ;
+; N/A                                     ; 102.16 MHz ( period = 9.789 ns )                    ; upcount:counter|Q[1]  ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.607 ns                ;
+; N/A                                     ; 102.24 MHz ( period = 9.781 ns )                    ; regn:regG|Q[2]        ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.530 ns                ;
+; N/A                                     ; 102.29 MHz ( period = 9.776 ns )                    ; regn:regG|Q[2]        ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.526 ns                ;
+; N/A                                     ; 102.29 MHz ( period = 9.776 ns )                    ; upcount:counter|Q[1]  ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.573 ns                ;
+; N/A                                     ; 102.34 MHz ( period = 9.771 ns )                    ; upcount:counter|Q[1]  ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.569 ns                ;
+; N/A                                     ; 102.43 MHz ( period = 9.763 ns )                    ; regn:functionreg|Q[7] ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.556 ns                ;
+; N/A                                     ; 102.44 MHz ( period = 9.762 ns )                    ; regn:functionreg|Q[7] ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.557 ns                ;
+; N/A                                     ; 102.57 MHz ( period = 9.749 ns )                    ; regn:regG|Q[0]        ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.622 ns                ;
+; N/A                                     ; 102.57 MHz ( period = 9.749 ns )                    ; regn:functionreg|Q[7] ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.523 ns                ;
+; N/A                                     ; 102.63 MHz ( period = 9.744 ns )                    ; regn:functionreg|Q[7] ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.519 ns                ;
+; N/A                                     ; 102.71 MHz ( period = 9.736 ns )                    ; regn:regG|Q[2]        ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.504 ns                ;
+; N/A                                     ; 102.72 MHz ( period = 9.735 ns )                    ; regn:regG|Q[2]        ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.505 ns                ;
+; N/A                                     ; 102.86 MHz ( period = 9.722 ns )                    ; regn:regG|Q[2]        ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.471 ns                ;
+; N/A                                     ; 102.90 MHz ( period = 9.718 ns )                    ; upcount:counter|Q[1]  ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.544 ns                ;
+; N/A                                     ; 102.91 MHz ( period = 9.717 ns )                    ; regn:regG|Q[2]        ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.467 ns                ;
+; N/A                                     ; 102.94 MHz ( period = 9.714 ns )                    ; regn:functionreg|Q[2] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.547 ns                ;
+; N/A                                     ; 102.98 MHz ( period = 9.711 ns )                    ; regn:regG|Q[0]        ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.465 ns                ;
+; N/A                                     ; 103.12 MHz ( period = 9.697 ns )                    ; upcount:counter|Q[1]  ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.499 ns                ;
+; N/A                                     ; 103.18 MHz ( period = 9.692 ns )                    ; regn:regG|Q[1]        ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.479 ns                ;
+; N/A                                     ; 103.18 MHz ( period = 9.692 ns )                    ; regn:regG|Q[0]        ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.468 ns                ;
+; N/A                                     ; 103.19 MHz ( period = 9.691 ns )                    ; regn:functionreg|Q[7] ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.494 ns                ;
+; N/A                                     ; 103.37 MHz ( period = 9.674 ns )                    ; regn:regG|Q[1]        ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.423 ns                ;
+; N/A                                     ; 103.41 MHz ( period = 9.670 ns )                    ; regn:functionreg|Q[7] ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.449 ns                ;
+; N/A                                     ; 103.42 MHz ( period = 9.669 ns )                    ; regn:regG|Q[1]        ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.419 ns                ;
+; N/A                                     ; 103.48 MHz ( period = 9.664 ns )                    ; regn:regG|Q[2]        ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.442 ns                ;
+; N/A                                     ; 103.56 MHz ( period = 9.656 ns )                    ; regn:regG|Q[0]        ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.405 ns                ;
+; N/A                                     ; 103.57 MHz ( period = 9.655 ns )                    ; regn:functionreg|Q[1] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.474 ns                ;
+; N/A                                     ; 103.57 MHz ( period = 9.655 ns )                    ; regn:regG|Q[0]        ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.405 ns                ;
+; N/A                                     ; 103.70 MHz ( period = 9.643 ns )                    ; regn:regG|Q[2]        ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.397 ns                ;
+; N/A                                     ; 103.73 MHz ( period = 9.640 ns )                    ; regn:functionreg|Q[6] ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.452 ns                ;
+; N/A                                     ; 103.85 MHz ( period = 9.629 ns )                    ; regn:regG|Q[1]        ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.397 ns                ;
+; N/A                                     ; 103.86 MHz ( period = 9.628 ns )                    ; upcount:counter|Q[1]  ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.549 ns                ;
+; N/A                                     ; 103.86 MHz ( period = 9.628 ns )                    ; regn:regG|Q[1]        ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.398 ns                ;
+; N/A                                     ; 103.93 MHz ( period = 9.622 ns )                    ; regn:functionreg|Q[6] ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.396 ns                ;
+; N/A                                     ; 103.98 MHz ( period = 9.617 ns )                    ; regn:functionreg|Q[6] ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.392 ns                ;
+; N/A                                     ; 104.00 MHz ( period = 9.615 ns )                    ; regn:regG|Q[1]        ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.364 ns                ;
+; N/A                                     ; 104.06 MHz ( period = 9.610 ns )                    ; regn:regG|Q[1]        ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.360 ns                ;
+; N/A                                     ; 104.07 MHz ( period = 9.609 ns )                    ; regn:regG|Q[0]        ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.377 ns                ;
+; N/A                                     ; 104.08 MHz ( period = 9.608 ns )                    ; regn:regG|Q[0]        ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.378 ns                ;
+; N/A                                     ; 104.14 MHz ( period = 9.602 ns )                    ; upcount:counter|Q[0]  ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.415 ns                ;
+; N/A                                     ; 104.16 MHz ( period = 9.601 ns )                    ; regn:functionreg|Q[7] ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.499 ns                ;
+; N/A                                     ; 104.28 MHz ( period = 9.590 ns )                    ; upcount:counter|Q[1]  ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.392 ns                ;
+; N/A                                     ; 104.29 MHz ( period = 9.589 ns )                    ; regn:functionreg|Q[8] ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.382 ns                ;
+; N/A                                     ; 104.31 MHz ( period = 9.587 ns )                    ; regn:functionreg|Q[8] ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.382 ns                ;
+; N/A                                     ; 104.34 MHz ( period = 9.584 ns )                    ; upcount:counter|Q[0]  ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.359 ns                ;
+; N/A                                     ; 104.40 MHz ( period = 9.579 ns )                    ; upcount:counter|Q[0]  ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.355 ns                ;
+; N/A                                     ; 104.42 MHz ( period = 9.577 ns )                    ; regn:functionreg|Q[6] ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.370 ns                ;
+; N/A                                     ; 104.43 MHz ( period = 9.576 ns )                    ; regn:functionreg|Q[6] ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.371 ns                ;
+; N/A                                     ; 104.45 MHz ( period = 9.574 ns )                    ; regn:regG|Q[2]        ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.447 ns                ;
+; N/A                                     ; 104.48 MHz ( period = 9.571 ns )                    ; upcount:counter|Q[1]  ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.395 ns                ;
+; N/A                                     ; 104.57 MHz ( period = 9.563 ns )                    ; regn:functionreg|Q[7] ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.342 ns                ;
+; N/A                                     ; 104.57 MHz ( period = 9.563 ns )                    ; regn:functionreg|Q[6] ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.337 ns                ;
+; N/A                                     ; 104.62 MHz ( period = 9.558 ns )                    ; regn:functionreg|Q[6] ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.333 ns                ;
+; N/A                                     ; 104.64 MHz ( period = 9.557 ns )                    ; regn:regG|Q[1]        ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.335 ns                ;
+; N/A                                     ; 104.65 MHz ( period = 9.556 ns )                    ; regn:regG|Q[0]        ; regn:regT|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.332 ns                ;
+; N/A                                     ; 104.66 MHz ( period = 9.555 ns )                    ; regn:regG|Q[0]        ; regn:reg1|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.333 ns                ;
+; N/A                                     ; 104.78 MHz ( period = 9.544 ns )                    ; regn:functionreg|Q[7] ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.345 ns                ;
+; N/A                                     ; 104.81 MHz ( period = 9.541 ns )                    ; regn:functionreg|Q[1] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.360 ns                ;
+; N/A                                     ; 104.83 MHz ( period = 9.539 ns )                    ; upcount:counter|Q[0]  ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.333 ns                ;
+; N/A                                     ; 104.84 MHz ( period = 9.538 ns )                    ; upcount:counter|Q[0]  ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.334 ns                ;
+; N/A                                     ; 104.87 MHz ( period = 9.536 ns )                    ; regn:regG|Q[2]        ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.290 ns                ;
+; N/A                                     ; 104.87 MHz ( period = 9.536 ns )                    ; regn:regG|Q[1]        ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.290 ns                ;
+; N/A                                     ; 104.88 MHz ( period = 9.535 ns )                    ; upcount:counter|Q[1]  ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.332 ns                ;
+; N/A                                     ; 104.89 MHz ( period = 9.534 ns )                    ; upcount:counter|Q[1]  ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.332 ns                ;
+; N/A                                     ; 104.99 MHz ( period = 9.525 ns )                    ; upcount:counter|Q[0]  ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.300 ns                ;
+; N/A                                     ; 105.04 MHz ( period = 9.520 ns )                    ; upcount:counter|Q[0]  ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.296 ns                ;
+; N/A                                     ; 105.08 MHz ( period = 9.517 ns )                    ; regn:regG|Q[2]        ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.293 ns                ;
+; N/A                                     ; 105.17 MHz ( period = 9.508 ns )                    ; regn:functionreg|Q[7] ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.282 ns                ;
+; N/A                                     ; 105.19 MHz ( period = 9.507 ns )                    ; regn:functionreg|Q[0] ; regn:regG|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.326 ns                ;
+; N/A                                     ; 105.19 MHz ( period = 9.507 ns )                    ; regn:regG|Q[0]        ; regn:reg3|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.261 ns                ;
+; N/A                                     ; 105.19 MHz ( period = 9.507 ns )                    ; regn:functionreg|Q[7] ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.282 ns                ;
+; N/A                                     ; 105.21 MHz ( period = 9.505 ns )                    ; regn:functionreg|Q[6] ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.308 ns                ;
+; N/A                                     ; 105.40 MHz ( period = 9.488 ns )                    ; upcount:counter|Q[1]  ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.304 ns                ;
+; N/A                                     ; 105.41 MHz ( period = 9.487 ns )                    ; upcount:counter|Q[1]  ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.305 ns                ;
+; N/A                                     ; 105.44 MHz ( period = 9.484 ns )                    ; regn:functionreg|Q[6] ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.263 ns                ;
+; N/A                                     ; 105.47 MHz ( period = 9.481 ns )                    ; regn:regG|Q[2]        ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.230 ns                ;
+; N/A                                     ; 105.49 MHz ( period = 9.480 ns )                    ; regn:regG|Q[2]        ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.230 ns                ;
+; N/A                                     ; 105.63 MHz ( period = 9.467 ns )                    ; regn:regG|Q[1]        ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.340 ns                ;
+; N/A                                     ; 105.63 MHz ( period = 9.467 ns )                    ; upcount:counter|Q[0]  ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.271 ns                ;
+; N/A                                     ; 105.70 MHz ( period = 9.461 ns )                    ; regn:functionreg|Q[7] ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.254 ns                ;
+; N/A                                     ; 105.71 MHz ( period = 9.460 ns )                    ; regn:functionreg|Q[7] ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.255 ns                ;
+; N/A                                     ; 105.82 MHz ( period = 9.450 ns )                    ; regn:regG|Q[0]        ; regn:reg0|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.323 ns                ;
+; N/A                                     ; 105.85 MHz ( period = 9.447 ns )                    ; regn:functionreg|Q[2] ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.262 ns                ;
+; N/A                                     ; 105.86 MHz ( period = 9.446 ns )                    ; upcount:counter|Q[0]  ; regn:reg3|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.226 ns                ;
+; N/A                                     ; 105.88 MHz ( period = 9.445 ns )                    ; regn:functionreg|Q[2] ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.262 ns                ;
+; N/A                                     ; 105.99 MHz ( period = 9.435 ns )                    ; upcount:counter|Q[1]  ; regn:regT|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.259 ns                ;
+; N/A                                     ; 106.00 MHz ( period = 9.434 ns )                    ; upcount:counter|Q[1]  ; regn:reg1|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.260 ns                ;
+; N/A                                     ; 106.00 MHz ( period = 9.434 ns )                    ; regn:regG|Q[2]        ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.202 ns                ;
+; N/A                                     ; 106.01 MHz ( period = 9.433 ns )                    ; regn:regG|Q[2]        ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.203 ns                ;
+; N/A                                     ; 106.06 MHz ( period = 9.429 ns )                    ; regn:regG|Q[1]        ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.183 ns                ;
+; N/A                                     ; 106.21 MHz ( period = 9.415 ns )                    ; regn:functionreg|Q[6] ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.313 ns                ;
+; N/A                                     ; 106.21 MHz ( period = 9.415 ns )                    ; regn:regG|Q[0]        ; regn:reg4|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.288 ns                ;
+; N/A                                     ; 106.27 MHz ( period = 9.410 ns )                    ; regn:regG|Q[1]        ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.186 ns                ;
+; N/A                                     ; 106.29 MHz ( period = 9.408 ns )                    ; regn:functionreg|Q[7] ; regn:regT|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.209 ns                ;
+; N/A                                     ; 106.30 MHz ( period = 9.407 ns )                    ; regn:functionreg|Q[7] ; regn:reg1|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.210 ns                ;
+; N/A                                     ; 106.46 MHz ( period = 9.393 ns )                    ; regn:functionreg|Q[0] ; regn:regG|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.212 ns                ;
+; N/A                                     ; 106.54 MHz ( period = 9.386 ns )                    ; upcount:counter|Q[1]  ; regn:reg3|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.188 ns                ;
+; N/A                                     ; 106.60 MHz ( period = 9.381 ns )                    ; regn:regG|Q[2]        ; regn:regT|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.157 ns                ;
+; N/A                                     ; 106.61 MHz ( period = 9.380 ns )                    ; regn:regG|Q[2]        ; regn:reg1|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.158 ns                ;
+; N/A                                     ; 106.64 MHz ( period = 9.377 ns )                    ; upcount:counter|Q[0]  ; regn:reg0|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.276 ns                ;
+; N/A                                     ; 106.64 MHz ( period = 9.377 ns )                    ; regn:functionreg|Q[6] ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.156 ns                ;
+; N/A                                     ; 106.68 MHz ( period = 9.374 ns )                    ; regn:regG|Q[1]        ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.123 ns                ;
+; N/A                                     ; 106.69 MHz ( period = 9.373 ns )                    ; regn:regG|Q[1]        ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.123 ns                ;
+; N/A                                     ; 106.71 MHz ( period = 9.371 ns )                    ; regn:functionreg|Q[8] ; regn:regA|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.183 ns                ;
+; N/A                                     ; 106.85 MHz ( period = 9.359 ns )                    ; regn:functionreg|Q[7] ; regn:reg3|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.138 ns                ;
+; N/A                                     ; 106.86 MHz ( period = 9.358 ns )                    ; regn:functionreg|Q[6] ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.159 ns                ;
+; N/A                                     ; 106.89 MHz ( period = 9.355 ns )                    ; regn:functionreg|Q[4] ; regn:regG|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.461 ns                ;
+; N/A                                     ; 106.92 MHz ( period = 9.353 ns )                    ; regn:functionreg|Q[8] ; regn:reg5|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.127 ns                ;
+; N/A                                     ; 106.97 MHz ( period = 9.348 ns )                    ; regn:functionreg|Q[8] ; regn:reg6|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.123 ns                ;
+; N/A                                     ; 107.08 MHz ( period = 9.339 ns )                    ; upcount:counter|Q[0]  ; regn:reg3|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.119 ns                ;
+; N/A                                     ; 107.16 MHz ( period = 9.332 ns )                    ; regn:regG|Q[2]        ; regn:reg3|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.086 ns                ;
+; N/A                                     ; 107.18 MHz ( period = 9.330 ns )                    ; regn:regG|Q[0]        ; regn:regA|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.117 ns                ;
+; N/A                                     ; 107.19 MHz ( period = 9.329 ns )                    ; upcount:counter|Q[1]  ; regn:reg0|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.250 ns                ;
+; N/A                                     ; 107.22 MHz ( period = 9.327 ns )                    ; regn:regG|Q[1]        ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.095 ns                ;
+; N/A                                     ; 107.23 MHz ( period = 9.326 ns )                    ; regn:regG|Q[1]        ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.096 ns                ;
+; N/A                                     ; 107.27 MHz ( period = 9.322 ns )                    ; regn:functionreg|Q[6] ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.096 ns                ;
+; N/A                                     ; 107.28 MHz ( period = 9.321 ns )                    ; regn:functionreg|Q[6] ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.096 ns                ;
+; N/A                                     ; 107.30 MHz ( period = 9.320 ns )                    ; upcount:counter|Q[0]  ; regn:regT|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.122 ns                ;
+; N/A                                     ; 107.43 MHz ( period = 9.308 ns )                    ; regn:functionreg|Q[8] ; regn:reg7|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.101 ns                ;
+; N/A                                     ; 107.45 MHz ( period = 9.307 ns )                    ; regn:functionreg|Q[8] ; regn:reg2|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.102 ns                ;
+; N/A                                     ; 107.47 MHz ( period = 9.305 ns )                    ; regn:regG|Q[0]        ; regn:reg1|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.083 ns                ;
+; N/A                                     ; 107.48 MHz ( period = 9.304 ns )                    ; regn:regG|Q[0]        ; regn:regT|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.080 ns                ;
+; N/A                                     ; 107.50 MHz ( period = 9.302 ns )                    ; regn:functionreg|Q[7] ; regn:reg0|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.200 ns                ;
+; N/A                                     ; 107.57 MHz ( period = 9.296 ns )                    ; regn:regG|Q[0]        ; regn:regA|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.083 ns                ;
+; N/A                                     ; 107.60 MHz ( period = 9.294 ns )                    ; regn:functionreg|Q[8] ; regn:reg5|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.068 ns                ;
+; N/A                                     ; 107.60 MHz ( period = 9.294 ns )                    ; upcount:counter|Q[1]  ; regn:reg4|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.215 ns                ;
+; N/A                                     ; 107.65 MHz ( period = 9.289 ns )                    ; regn:functionreg|Q[8] ; regn:reg6|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.064 ns                ;
+; N/A                                     ; 107.71 MHz ( period = 9.284 ns )                    ; upcount:counter|Q[0]  ; regn:reg5|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.059 ns                ;
+; N/A                                     ; 107.72 MHz ( period = 9.283 ns )                    ; upcount:counter|Q[0]  ; regn:reg6|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.059 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; regn:regG|Q[2]        ; regn:reg0|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.148 ns                ;
+; N/A                                     ; 107.82 MHz ( period = 9.275 ns )                    ; regn:functionreg|Q[6] ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.068 ns                ;
+; N/A                                     ; 107.83 MHz ( period = 9.274 ns )                    ; regn:functionreg|Q[1] ; regn:reg7|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.075 ns                ;
+; N/A                                     ; 107.83 MHz ( period = 9.274 ns )                    ; regn:regG|Q[1]        ; regn:regT|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.050 ns                ;
+; N/A                                     ; 107.83 MHz ( period = 9.274 ns )                    ; regn:functionreg|Q[6] ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.069 ns                ;
+; N/A                                     ; 107.84 MHz ( period = 9.273 ns )                    ; regn:regG|Q[1]        ; regn:reg1|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 9.051 ns                ;
+; N/A                                     ; 107.85 MHz ( period = 9.272 ns )                    ; regn:functionreg|Q[1] ; regn:reg2|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.075 ns                ;
+; N/A                                     ; 107.91 MHz ( period = 9.267 ns )                    ; regn:functionreg|Q[7] ; regn:reg4|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.165 ns                ;
+; N/A                                     ; 108.23 MHz ( period = 9.240 ns )                    ; regn:regG|Q[2]        ; regn:reg4|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.113 ns                ;
+; N/A                                     ; 108.26 MHz ( period = 9.237 ns )                    ; upcount:counter|Q[0]  ; regn:reg7|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.031 ns                ;
+; N/A                                     ; 108.27 MHz ( period = 9.236 ns )                    ; regn:functionreg|Q[8] ; regn:reg1|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 9.039 ns                ;
+; N/A                                     ; 108.27 MHz ( period = 9.236 ns )                    ; upcount:counter|Q[0]  ; regn:reg2|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 9.032 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                       ;                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+---------+-----------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                    ; To Clock ;
++-------+--------------+------------+---------+-----------------------+----------+
+; N/A   ; None         ; 8.351 ns   ; w       ; regn:functionreg|Q[0] ; Clock    ;
+; N/A   ; None         ; 8.351 ns   ; w       ; regn:functionreg|Q[1] ; Clock    ;
+; N/A   ; None         ; 8.101 ns   ; w       ; regn:functionreg|Q[2] ; Clock    ;
+; N/A   ; None         ; 7.826 ns   ; w       ; regn:functionreg|Q[5] ; Clock    ;
+; N/A   ; None         ; 7.826 ns   ; w       ; regn:functionreg|Q[4] ; Clock    ;
+; N/A   ; None         ; 7.826 ns   ; w       ; regn:functionreg|Q[3] ; Clock    ;
+; N/A   ; None         ; 7.539 ns   ; w       ; upcount:counter|Q[0]  ; Clock    ;
+; N/A   ; None         ; 7.534 ns   ; w       ; regn:functionreg|Q[6] ; Clock    ;
+; N/A   ; None         ; 7.534 ns   ; w       ; regn:functionreg|Q[7] ; Clock    ;
+; N/A   ; None         ; 7.534 ns   ; w       ; regn:functionreg|Q[8] ; Clock    ;
+; N/A   ; None         ; 7.143 ns   ; Data[1] ; regn:regG|Q[2]        ; Clock    ;
+; N/A   ; None         ; 7.086 ns   ; Data[0] ; regn:regG|Q[2]        ; Clock    ;
+; N/A   ; None         ; 6.967 ns   ; Data[0] ; regn:regG|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.853 ns   ; Data[0] ; regn:regG|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.808 ns   ; Data[1] ; regn:regG|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.678 ns   ; Data[2] ; regn:regG|Q[2]        ; Clock    ;
+; N/A   ; None         ; 6.586 ns   ; Data[0] ; regn:reg7|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.584 ns   ; Data[0] ; regn:reg2|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.408 ns   ; Data[1] ; regn:reg3|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.368 ns   ; Data[0] ; regn:regA|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.350 ns   ; Data[0] ; regn:reg5|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.345 ns   ; Data[0] ; regn:reg6|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.246 ns   ; Data[1] ; regn:reg5|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.245 ns   ; Data[1] ; regn:reg6|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.233 ns   ; Data[0] ; regn:reg1|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.199 ns   ; Data[1] ; regn:reg7|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.198 ns   ; Data[1] ; regn:reg2|Q[1]        ; Clock    ;
+; N/A   ; None         ; 6.143 ns   ; Data[0] ; regn:reg0|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.105 ns   ; Data[0] ; regn:reg3|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.086 ns   ; Data[0] ; regn:regT|Q[0]        ; Clock    ;
+; N/A   ; None         ; 6.005 ns   ; Data[1] ; regn:reg4|Q[1]        ; Clock    ;
+; N/A   ; None         ; 5.895 ns   ; Data[1] ; regn:reg1|Q[1]        ; Clock    ;
+; N/A   ; None         ; 5.894 ns   ; Data[1] ; regn:regT|Q[1]        ; Clock    ;
+; N/A   ; None         ; 5.886 ns   ; Data[1] ; regn:regA|Q[1]        ; Clock    ;
+; N/A   ; None         ; 5.840 ns   ; F[1]    ; regn:functionreg|Q[7] ; Clock    ;
+; N/A   ; None         ; 5.611 ns   ; Data[2] ; regn:reg7|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.610 ns   ; Data[2] ; regn:reg2|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.597 ns   ; Data[2] ; regn:reg5|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.592 ns   ; Data[2] ; regn:reg6|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.492 ns   ; F[2]    ; regn:functionreg|Q[8] ; Clock    ;
+; N/A   ; None         ; 5.256 ns   ; Data[2] ; regn:regT|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.255 ns   ; Data[2] ; regn:reg1|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.207 ns   ; Data[2] ; regn:reg3|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.154 ns   ; Rx[2]   ; regn:functionreg|Q[5] ; Clock    ;
+; N/A   ; None         ; 5.150 ns   ; Data[2] ; regn:reg0|Q[2]        ; Clock    ;
+; N/A   ; None         ; 5.140 ns   ; Rx[0]   ; regn:functionreg|Q[3] ; Clock    ;
+; N/A   ; None         ; 5.139 ns   ; Rx[1]   ; regn:functionreg|Q[4] ; Clock    ;
+; N/A   ; None         ; 5.043 ns   ; Data[1] ; regn:reg0|Q[1]        ; Clock    ;
+; N/A   ; None         ; 5.030 ns   ; Data[2] ; regn:regA|Q[2]        ; Clock    ;
+; N/A   ; None         ; 4.940 ns   ; Data[0] ; regn:reg4|Q[0]        ; Clock    ;
+; N/A   ; None         ; 4.654 ns   ; Ry[2]   ; regn:functionreg|Q[2] ; Clock    ;
+; N/A   ; None         ; 4.279 ns   ; Ry[1]   ; regn:functionreg|Q[1] ; Clock    ;
+; N/A   ; None         ; 4.181 ns   ; Data[2] ; regn:reg4|Q[2]        ; Clock    ;
+; N/A   ; None         ; 4.144 ns   ; F[0]    ; regn:functionreg|Q[6] ; Clock    ;
+; N/A   ; None         ; 4.093 ns   ; Ry[0]   ; regn:functionreg|Q[0] ; Clock    ;
++-------+--------------+------------+---------+-----------------------+----------+
+
+
++--------------------------------------------------------------------------------------+
+; tco                                                                                  ;
++-------+--------------+------------+-----------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From                  ; To          ; From Clock ;
++-------+--------------+------------+-----------------------+-------------+------------+
+; N/A   ; None         ; 19.004 ns  ; regn:regG|Q[0]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.883 ns  ; upcount:counter|Q[1]  ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.856 ns  ; regn:functionreg|Q[7] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.829 ns  ; regn:regG|Q[2]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.722 ns  ; regn:regG|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.670 ns  ; regn:functionreg|Q[6] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.632 ns  ; upcount:counter|Q[0]  ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.401 ns  ; regn:functionreg|Q[8] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.259 ns  ; regn:functionreg|Q[2] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.188 ns  ; regn:regG|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 18.086 ns  ; regn:functionreg|Q[1] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 18.067 ns  ; upcount:counter|Q[1]  ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 18.040 ns  ; regn:functionreg|Q[7] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 18.013 ns  ; regn:regG|Q[2]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.938 ns  ; regn:functionreg|Q[0] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 17.906 ns  ; regn:regG|Q[1]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.866 ns  ; regn:regG|Q[0]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.854 ns  ; regn:functionreg|Q[6] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.816 ns  ; upcount:counter|Q[0]  ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.745 ns  ; upcount:counter|Q[1]  ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.718 ns  ; regn:functionreg|Q[7] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.691 ns  ; regn:regG|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.585 ns  ; regn:functionreg|Q[8] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.584 ns  ; regn:regG|Q[1]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.532 ns  ; regn:functionreg|Q[6] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.494 ns  ; upcount:counter|Q[0]  ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.443 ns  ; regn:functionreg|Q[2] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.381 ns  ; regn:functionreg|Q[4] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 17.270 ns  ; regn:functionreg|Q[1] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.263 ns  ; regn:functionreg|Q[8] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.247 ns  ; regn:functionreg|Q[5] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 17.122 ns  ; regn:functionreg|Q[0] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 17.121 ns  ; regn:functionreg|Q[2] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 17.118 ns  ; regn:functionreg|Q[3] ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 16.948 ns  ; regn:functionreg|Q[1] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 16.800 ns  ; regn:functionreg|Q[0] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 16.558 ns  ; regn:functionreg|Q[4] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 16.424 ns  ; regn:functionreg|Q[5] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 16.295 ns  ; regn:functionreg|Q[3] ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 16.243 ns  ; regn:functionreg|Q[4] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 16.109 ns  ; regn:functionreg|Q[5] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 15.980 ns  ; regn:functionreg|Q[3] ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 14.700 ns  ; regn:reg3|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 14.051 ns  ; regn:reg6|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 13.709 ns  ; regn:reg3|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 13.564 ns  ; regn:reg4|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 13.559 ns  ; regn:reg4|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 13.293 ns  ; regn:reg7|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 13.286 ns  ; regn:regG|Q[0]        ; Done        ; Clock      ;
+; N/A   ; None         ; 13.160 ns  ; regn:regT|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 13.111 ns  ; regn:regG|Q[2]        ; Done        ; Clock      ;
+; N/A   ; None         ; 13.004 ns  ; regn:regG|Q[1]        ; Done        ; Clock      ;
+; N/A   ; None         ; 12.924 ns  ; regn:reg1|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 12.908 ns  ; regn:reg4|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 12.903 ns  ; regn:reg3|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 12.881 ns  ; regn:functionreg|Q[7] ; Done        ; Clock      ;
+; N/A   ; None         ; 12.594 ns  ; regn:reg2|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 12.329 ns  ; regn:functionreg|Q[8] ; Done        ; Clock      ;
+; N/A   ; None         ; 12.288 ns  ; regn:reg6|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 12.241 ns  ; regn:reg5|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 12.204 ns  ; regn:regT|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 12.133 ns  ; regn:reg7|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 12.018 ns  ; regn:functionreg|Q[6] ; Done        ; Clock      ;
+; N/A   ; None         ; 11.930 ns  ; regn:reg6|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 11.777 ns  ; regn:reg7|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 11.719 ns  ; upcount:counter|Q[0]  ; Done        ; Clock      ;
+; N/A   ; None         ; 11.646 ns  ; regn:reg5|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 11.476 ns  ; upcount:counter|Q[1]  ; Done        ; Clock      ;
+; N/A   ; None         ; 11.457 ns  ; regn:reg1|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 11.434 ns  ; regn:reg2|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 11.355 ns  ; regn:reg1|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 11.293 ns  ; regn:reg5|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 11.172 ns  ; regn:reg0|Q[1]        ; BusWires[1] ; Clock      ;
+; N/A   ; None         ; 11.078 ns  ; regn:reg2|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 10.766 ns  ; regn:regT|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 10.656 ns  ; regn:reg0|Q[0]        ; BusWires[0] ; Clock      ;
+; N/A   ; None         ; 10.595 ns  ; regn:reg0|Q[2]        ; BusWires[2] ; Clock      ;
+; N/A   ; None         ; 7.294 ns   ; upcount:counter|Q[0]  ; state[0]    ; Clock      ;
+; N/A   ; None         ; 7.036 ns   ; upcount:counter|Q[1]  ; state[1]    ; Clock      ;
++-------+--------------+------------+-----------------------+-------------+------------+
+
+
++---------------------------------------------------------------------+
+; tpd                                                                 ;
++-------+-------------------+-----------------+---------+-------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From    ; To          ;
++-------+-------------------+-----------------+---------+-------------+
+; N/A   ; None              ; 15.594 ns       ; Data[1] ; BusWires[1] ;
+; N/A   ; None              ; 14.582 ns       ; Data[0] ; BusWires[0] ;
+; N/A   ; None              ; 13.566 ns       ; Data[2] ; BusWires[2] ;
++-------+-------------------+-----------------+---------+-------------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+---------+-----------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                    ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------+----------+
+; N/A           ; None        ; -3.863 ns ; Ry[0]   ; regn:functionreg|Q[0] ; Clock    ;
+; N/A           ; None        ; -3.914 ns ; F[0]    ; regn:functionreg|Q[6] ; Clock    ;
+; N/A           ; None        ; -3.951 ns ; Data[2] ; regn:reg4|Q[2]        ; Clock    ;
+; N/A           ; None        ; -4.049 ns ; Ry[1]   ; regn:functionreg|Q[1] ; Clock    ;
+; N/A           ; None        ; -4.424 ns ; Ry[2]   ; regn:functionreg|Q[2] ; Clock    ;
+; N/A           ; None        ; -4.710 ns ; Data[0] ; regn:reg4|Q[0]        ; Clock    ;
+; N/A           ; None        ; -4.800 ns ; Data[2] ; regn:regA|Q[2]        ; Clock    ;
+; N/A           ; None        ; -4.813 ns ; Data[1] ; regn:reg0|Q[1]        ; Clock    ;
+; N/A           ; None        ; -4.909 ns ; Rx[1]   ; regn:functionreg|Q[4] ; Clock    ;
+; N/A           ; None        ; -4.910 ns ; Rx[0]   ; regn:functionreg|Q[3] ; Clock    ;
+; N/A           ; None        ; -4.920 ns ; Data[2] ; regn:reg0|Q[2]        ; Clock    ;
+; N/A           ; None        ; -4.924 ns ; Rx[2]   ; regn:functionreg|Q[5] ; Clock    ;
+; N/A           ; None        ; -4.977 ns ; Data[2] ; regn:reg3|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.025 ns ; Data[2] ; regn:reg1|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.026 ns ; Data[2] ; regn:regT|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.262 ns ; F[2]    ; regn:functionreg|Q[8] ; Clock    ;
+; N/A           ; None        ; -5.362 ns ; Data[2] ; regn:reg6|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.367 ns ; Data[2] ; regn:reg5|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.380 ns ; Data[2] ; regn:reg2|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.381 ns ; Data[2] ; regn:reg7|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.468 ns ; Data[2] ; regn:regG|Q[2]        ; Clock    ;
+; N/A           ; None        ; -5.610 ns ; F[1]    ; regn:functionreg|Q[7] ; Clock    ;
+; N/A           ; None        ; -5.656 ns ; Data[1] ; regn:regA|Q[1]        ; Clock    ;
+; N/A           ; None        ; -5.664 ns ; Data[1] ; regn:regT|Q[1]        ; Clock    ;
+; N/A           ; None        ; -5.665 ns ; Data[1] ; regn:reg1|Q[1]        ; Clock    ;
+; N/A           ; None        ; -5.775 ns ; Data[1] ; regn:reg4|Q[1]        ; Clock    ;
+; N/A           ; None        ; -5.856 ns ; Data[0] ; regn:regT|Q[0]        ; Clock    ;
+; N/A           ; None        ; -5.875 ns ; Data[0] ; regn:reg3|Q[0]        ; Clock    ;
+; N/A           ; None        ; -5.879 ns ; Data[0] ; regn:regG|Q[0]        ; Clock    ;
+; N/A           ; None        ; -5.913 ns ; Data[0] ; regn:reg0|Q[0]        ; Clock    ;
+; N/A           ; None        ; -5.968 ns ; Data[1] ; regn:reg2|Q[1]        ; Clock    ;
+; N/A           ; None        ; -5.969 ns ; Data[1] ; regn:reg7|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.003 ns ; Data[0] ; regn:reg1|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.015 ns ; Data[1] ; regn:reg6|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.016 ns ; Data[1] ; regn:reg5|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.115 ns ; Data[0] ; regn:reg6|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.120 ns ; Data[0] ; regn:reg5|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.138 ns ; Data[0] ; regn:regA|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.178 ns ; Data[1] ; regn:reg3|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.220 ns ; Data[1] ; regn:regG|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.354 ns ; Data[0] ; regn:reg2|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.356 ns ; Data[0] ; regn:reg7|Q[0]        ; Clock    ;
+; N/A           ; None        ; -6.478 ns ; Data[0] ; regn:regG|Q[1]        ; Clock    ;
+; N/A           ; None        ; -6.620 ns ; Data[0] ; regn:regG|Q[2]        ; Clock    ;
+; N/A           ; None        ; -6.784 ns ; Data[1] ; regn:regG|Q[2]        ; Clock    ;
+; N/A           ; None        ; -7.304 ns ; w       ; regn:functionreg|Q[6] ; Clock    ;
+; N/A           ; None        ; -7.304 ns ; w       ; regn:functionreg|Q[7] ; Clock    ;
+; N/A           ; None        ; -7.304 ns ; w       ; regn:functionreg|Q[8] ; Clock    ;
+; N/A           ; None        ; -7.309 ns ; w       ; upcount:counter|Q[0]  ; Clock    ;
+; N/A           ; None        ; -7.596 ns ; w       ; regn:functionreg|Q[5] ; Clock    ;
+; N/A           ; None        ; -7.596 ns ; w       ; regn:functionreg|Q[4] ; Clock    ;
+; N/A           ; None        ; -7.596 ns ; w       ; regn:functionreg|Q[3] ; Clock    ;
+; N/A           ; None        ; -7.871 ns ; w       ; regn:functionreg|Q[2] ; Clock    ;
+; N/A           ; None        ; -8.121 ns ; w       ; regn:functionreg|Q[0] ; Clock    ;
+; N/A           ; None        ; -8.121 ns ; w       ; regn:functionreg|Q[1] ; Clock    ;
++---------------+-------------+-----------+---------+-----------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Wed Dec 18 19:58:17 2019
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off project -c project --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock" is an undefined clock
+Info: Clock "Clock" has Internal fmax of 91.09 MHz between source register "regn:regG|Q[0]" and destination register "regn:regG|Q[2]" (period= 10.978 ns)
+    Info: + Longest register to register delay is 10.764 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X93_Y24_N1; Fanout = 2; REG Node = 'regn:regG|Q[0]'
+        Info: 2: + IC(0.325 ns) + CELL(0.420 ns) = 0.745 ns; Loc. = LCCOMB_X93_Y24_N6; Fanout = 2; COMB Node = 'Mux16~0'
+        Info: 3: + IC(0.953 ns) + CELL(0.150 ns) = 1.848 ns; Loc. = LCCOMB_X91_Y23_N6; Fanout = 4; COMB Node = 'Mux77~5'
+        Info: 4: + IC(0.272 ns) + CELL(0.150 ns) = 2.270 ns; Loc. = LCCOMB_X91_Y23_N24; Fanout = 9; COMB Node = 'Mux77~8'
+        Info: 5: + IC(0.709 ns) + CELL(0.438 ns) = 3.417 ns; Loc. = LCCOMB_X93_Y23_N26; Fanout = 3; COMB Node = 'Equal7~2'
+        Info: 6: + IC(0.264 ns) + CELL(0.416 ns) = 4.097 ns; Loc. = LCCOMB_X93_Y23_N12; Fanout = 4; COMB Node = 'Equal0~0'
+        Info: 7: + IC(0.754 ns) + CELL(0.150 ns) = 5.001 ns; Loc. = LCCOMB_X92_Y24_N28; Fanout = 4; COMB Node = 'Equal4~1'
+        Info: 8: + IC(0.785 ns) + CELL(0.437 ns) = 6.223 ns; Loc. = LCCOMB_X91_Y22_N10; Fanout = 1; COMB Node = 'Selector0~3'
+        Info: 9: + IC(0.723 ns) + CELL(0.149 ns) = 7.095 ns; Loc. = LCCOMB_X92_Y23_N0; Fanout = 1; COMB Node = 'Selector0~4'
+        Info: 10: + IC(0.437 ns) + CELL(0.149 ns) = 7.681 ns; Loc. = LCCOMB_X92_Y24_N20; Fanout = 1; COMB Node = 'Selector0~5'
+        Info: 11: + IC(0.440 ns) + CELL(0.149 ns) = 8.270 ns; Loc. = LCCOMB_X92_Y24_N6; Fanout = 13; COMB Node = 'Selector0~6'
+        Info: 12: + IC(0.479 ns) + CELL(0.420 ns) = 9.169 ns; Loc. = LCCOMB_X93_Y24_N24; Fanout = 2; COMB Node = 'Sum~0'
+        Info: 13: + IC(0.277 ns) + CELL(0.438 ns) = 9.884 ns; Loc. = LCCOMB_X93_Y24_N2; Fanout = 1; COMB Node = 'Add0~1'
+        Info: 14: + IC(0.250 ns) + CELL(0.150 ns) = 10.284 ns; Loc. = LCCOMB_X93_Y24_N28; Fanout = 1; COMB Node = 'Mux92~0'
+        Info: 15: + IC(0.246 ns) + CELL(0.150 ns) = 10.680 ns; Loc. = LCCOMB_X93_Y24_N20; Fanout = 1; COMB Node = 'Mux92~1'
+        Info: 16: + IC(0.000 ns) + CELL(0.084 ns) = 10.764 ns; Loc. = LCFF_X93_Y24_N21; Fanout = 2; REG Node = 'regn:regG|Q[2]'
+        Info: Total cell delay = 3.850 ns ( 35.77 % )
+        Info: Total interconnect delay = 6.914 ns ( 64.23 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 2.637 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 44; CLK Node = 'Clock'
+            Info: 2: + IC(1.258 ns) + CELL(0.537 ns) = 2.637 ns; Loc. = LCFF_X93_Y24_N21; Fanout = 2; REG Node = 'regn:regG|Q[2]'
+            Info: Total cell delay = 1.379 ns ( 52.29 % )
+            Info: Total interconnect delay = 1.258 ns ( 47.71 % )
+        Info: - Longest clock path from clock "Clock" to source register is 2.637 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 44; CLK Node = 'Clock'
+            Info: 2: + IC(1.258 ns) + CELL(0.537 ns) = 2.637 ns; Loc. = LCFF_X93_Y24_N1; Fanout = 2; REG Node = 'regn:regG|Q[0]'
+            Info: Total cell delay = 1.379 ns ( 52.29 % )
+            Info: Total interconnect delay = 1.258 ns ( 47.71 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "regn:functionreg|Q[0]" (data pin = "w", clock pin = "Clock") is 8.351 ns
+    Info: + Longest pin to register delay is 10.991 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.812 ns) = 0.812 ns; Loc. = PIN_L8; Fanout = 2; PIN Node = 'w'
+        Info: 2: + IC(7.631 ns) + CELL(0.150 ns) = 8.593 ns; Loc. = LCCOMB_X93_Y22_N8; Fanout = 9; COMB Node = 'FRin~0'
+        Info: 3: + IC(1.738 ns) + CELL(0.660 ns) = 10.991 ns; Loc. = LCFF_X93_Y22_N9; Fanout = 6; REG Node = 'regn:functionreg|Q[0]'
+        Info: Total cell delay = 1.622 ns ( 14.76 % )
+        Info: Total interconnect delay = 9.369 ns ( 85.24 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 2.604 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 44; CLK Node = 'Clock'
+        Info: 2: + IC(1.225 ns) + CELL(0.537 ns) = 2.604 ns; Loc. = LCFF_X93_Y22_N9; Fanout = 6; REG Node = 'regn:functionreg|Q[0]'
+        Info: Total cell delay = 1.379 ns ( 52.96 % )
+        Info: Total interconnect delay = 1.225 ns ( 47.04 % )
+Info: tco from clock "Clock" to destination pin "BusWires[1]" through register "regn:regG|Q[0]" is 19.004 ns
+    Info: + Longest clock path from clock "Clock" to source register is 2.637 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 44; CLK Node = 'Clock'
+        Info: 2: + IC(1.258 ns) + CELL(0.537 ns) = 2.637 ns; Loc. = LCFF_X93_Y24_N1; Fanout = 2; REG Node = 'regn:regG|Q[0]'
+        Info: Total cell delay = 1.379 ns ( 52.29 % )
+        Info: Total interconnect delay = 1.258 ns ( 47.71 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 16.117 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X93_Y24_N1; Fanout = 2; REG Node = 'regn:regG|Q[0]'
+        Info: 2: + IC(0.325 ns) + CELL(0.420 ns) = 0.745 ns; Loc. = LCCOMB_X93_Y24_N6; Fanout = 2; COMB Node = 'Mux16~0'
+        Info: 3: + IC(0.953 ns) + CELL(0.150 ns) = 1.848 ns; Loc. = LCCOMB_X91_Y23_N6; Fanout = 4; COMB Node = 'Mux77~5'
+        Info: 4: + IC(0.272 ns) + CELL(0.150 ns) = 2.270 ns; Loc. = LCCOMB_X91_Y23_N24; Fanout = 9; COMB Node = 'Mux77~8'
+        Info: 5: + IC(0.709 ns) + CELL(0.438 ns) = 3.417 ns; Loc. = LCCOMB_X93_Y23_N26; Fanout = 3; COMB Node = 'Equal7~2'
+        Info: 6: + IC(0.264 ns) + CELL(0.416 ns) = 4.097 ns; Loc. = LCCOMB_X93_Y23_N12; Fanout = 4; COMB Node = 'Equal0~0'
+        Info: 7: + IC(0.754 ns) + CELL(0.150 ns) = 5.001 ns; Loc. = LCCOMB_X92_Y24_N28; Fanout = 4; COMB Node = 'Equal4~1'
+        Info: 8: + IC(0.980 ns) + CELL(0.438 ns) = 6.419 ns; Loc. = LCCOMB_X93_Y23_N28; Fanout = 1; COMB Node = 'WideNor0~1'
+        Info: 9: + IC(0.252 ns) + CELL(0.149 ns) = 6.820 ns; Loc. = LCCOMB_X93_Y23_N30; Fanout = 3; COMB Node = 'WideNor0~2'
+        Info: 10: + IC(0.412 ns) + CELL(0.150 ns) = 7.382 ns; Loc. = LCCOMB_X92_Y23_N4; Fanout = 1; COMB Node = 'Selector1~5'
+        Info: 11: + IC(0.711 ns) + CELL(0.149 ns) = 8.242 ns; Loc. = LCCOMB_X92_Y24_N0; Fanout = 15; COMB Node = 'Selector1~6'
+        Info: 12: + IC(5.057 ns) + CELL(2.818 ns) = 16.117 ns; Loc. = PIN_AK5; Fanout = 0; PIN Node = 'BusWires[1]'
+        Info: Total cell delay = 5.428 ns ( 33.68 % )
+        Info: Total interconnect delay = 10.689 ns ( 66.32 % )
+Info: Longest tpd from source pin "Data[1]" to destination pin "BusWires[1]" is 15.594 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.832 ns) = 0.832 ns; Loc. = PIN_AB26; Fanout = 1; PIN Node = 'Data[1]'
+    Info: 2: + IC(5.589 ns) + CELL(0.438 ns) = 6.859 ns; Loc. = LCCOMB_X92_Y23_N4; Fanout = 1; COMB Node = 'Selector1~5'
+    Info: 3: + IC(0.711 ns) + CELL(0.149 ns) = 7.719 ns; Loc. = LCCOMB_X92_Y24_N0; Fanout = 15; COMB Node = 'Selector1~6'
+    Info: 4: + IC(5.057 ns) + CELL(2.818 ns) = 15.594 ns; Loc. = PIN_AK5; Fanout = 0; PIN Node = 'BusWires[1]'
+    Info: Total cell delay = 4.237 ns ( 27.17 % )
+    Info: Total interconnect delay = 11.357 ns ( 72.83 % )
+Info: th for register "regn:functionreg|Q[0]" (data pin = "Ry[0]", clock pin = "Clock") is -3.863 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 2.604 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 44; CLK Node = 'Clock'
+        Info: 2: + IC(1.225 ns) + CELL(0.537 ns) = 2.604 ns; Loc. = LCFF_X93_Y22_N9; Fanout = 6; REG Node = 'regn:functionreg|Q[0]'
+        Info: Total cell delay = 1.379 ns ( 52.96 % )
+        Info: Total interconnect delay = 1.225 ns ( 47.04 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 6.733 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_AC27; Fanout = 1; PIN Node = 'Ry[0]'
+        Info: 2: + IC(5.515 ns) + CELL(0.366 ns) = 6.733 ns; Loc. = LCFF_X93_Y22_N9; Fanout = 6; REG Node = 'regn:functionreg|Q[0]'
+        Info: Total cell delay = 1.218 ns ( 18.09 % )
+        Info: Total interconnect delay = 5.515 ns ( 81.91 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 247 megabytes
+    Info: Processing ended: Wed Dec 18 19:58:18 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
